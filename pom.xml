@@ -1,8 +1,14 @@
+<!-- This is the first comment -->
+
+
+<!-- Project Metadata -->
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+<!-- Project coordinates -->
 
     <groupId>com.corepulse</groupId>
     <artifactId>CorePulse-P2</artifactId>
@@ -17,6 +23,8 @@
 
         <main.class>com.corepulse.Main</main.class>
     </properties>
+
+<!-- OS Profiles [for JAvaFx]-->
 
     <profiles>
         <profile>
@@ -56,6 +64,8 @@
             <version>6.6.3</version>
         </dependency>
 
+<!-- TO handle Logs from OSHI -->
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -72,6 +82,7 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>${javafx.version}</version>
+<!-- Depending upon OS -->
             <classifier>${javafx.platform}</classifier>
         </dependency>
 
@@ -92,6 +103,7 @@
 
             <plugin>
                 <groupId>org.openjfx</groupId>
+<!-- for the command mvn javafx::run -->
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <executions>
